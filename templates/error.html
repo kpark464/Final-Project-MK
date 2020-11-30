@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazing app to help you find nearest MBTA station</title>
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">-->
+</head>
+<body>
+    <div>
+        <h1>Opps. Something went wrong</h1>
+        {% if error %}
+            <div>
+                <h3>{{ error['code'] }} {{ error['name'] }}</h3>
+                <h4>{{ error['description'] }}</h4>
+            </div>
+        {% endif %}
+        <form action="/backToHome" method="POST">
+            <button type="submit" value="Search stops">New Search</button>
+        </form>
+    </div>
+</body>
+</html>

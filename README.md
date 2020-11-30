@@ -1,2 +1,2 @@
-# Final-Project-MK
-This is the repo for the final project in class MIS3640. 
+# WebApp-MBTA
+ This is the base repo for MBTA project. Please read [instructions](instructions.md). 
