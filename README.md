@@ -5,10 +5,8 @@ Created by: Minghui Li & Kimberly Park
 ## Project Overview
 
 Similar to the MBTA services, in this project, we created The Ultimate MBTA Guide for users to locate nearby train/bus stations and other services with both convenience and ease. While the MBTA app may help, we wanted to create a service web with improved UI/UX for the users. This can be used if you are looking for the nearest stations in Massachusetts area or if you are looking for Python example of using the API keys. 
-We hope this will help you make your journey to your destination easier in Massachusetts!
-*Disclosure: the website does not provide recommended route or nearest station based on your location.
+We hope this will help you make your journey to/from your destination easier in Massachusetts!
 
-# Instruction:
 ## Part 1: Installing and Retrieving the Link
 1. Access the codes in our public repository: https://github.com/kpark464/Final-Project-MK.git
 2. Open mbta_helper.py file from the repository (we recommend opening with VS Code or other python coding software)
