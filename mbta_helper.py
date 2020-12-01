@@ -147,6 +147,7 @@ def bus_arrival_prediction(stop_id, limit):
     f = urllib.request.urlopen(req)
     response_text = f.read().decode('utf-8')
     response_data = json.loads(response_text)
+    print(response_data['data'])
 
     result = []
     for arrival in response_data['data']:
@@ -156,13 +157,16 @@ def bus_arrival_prediction(stop_id, limit):
         result_dict['direction_id'] = attributes['direction_id']
         result_dict['prediction_id'] = arrival['id']
         result_dict['stop_id'] = relationships['stop']['data']['id']
-        result_dict['trip_id'] = relationships['vehicle']['data']['id']
 
-        arrival_time = dateutil.parser.parse(attributes['arrival_time'])
+        arrival_time = attributes['arrival_time']
+        if arrival_time is not None:
+            arrival_time = dateutil.parser.parse(arrival_time)
 
         result_dict['arrival_time'] = arrival_time
 
-        vehicle_info = get_vehicle_info(relationships['vehicle']['data']['id'])
+        vehicle_info = None
+        if relationships['vehicle']['data']:
+            vehicle_info = get_vehicle_info(relationships['vehicle']['data']['id'])
         result_dict['vehicle_info'] = vehicle_info
 
         direction_info = get_direction_info(result_dict['direction_id'],
