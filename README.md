@@ -1,6 +1,5 @@
 # The Ultimate MBTA Guide (Python)
-Created by: Minghui Li & Kimberly Park
-<MIS3640 - 02 Fall '20>
+Created by: Kimberly Park & Minghui Li
 
 ## Project Overview
 
